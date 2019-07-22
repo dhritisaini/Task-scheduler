@@ -37,21 +37,19 @@ function createListElement() {
 	}
 }
 
-
 function addListAfterClick(){
-	if (inputLength() > 0) { //makes sure that an empty input field doesn't create a li
+	if (inputLength() > 0) 
+	{ 
 		createListElement();
 	}
 }
 
 function addListAfterKeypress(event) {
-	if (inputLength() > 0 && event.which ===13) { //this now looks to see if you hit "enter"/"return"
-		//the 13 is the enter key's keycode, this could also be display by event.keyCode === 13
+	if (inputLength() > 0 && event.which ===13) //to add list item when Enter key is pressed
+	{
 		createListElement();
 	} 
 }
 
-
 enterButton.addEventListener("click",addListAfterClick);
-
 input.addEventListener("keypress", addListAfterKeypress);
